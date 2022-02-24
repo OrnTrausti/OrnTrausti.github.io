@@ -1,0 +1,65 @@
+body {
+  max-width: 60em;
+  margin: 0 auto;
+  font-family: ;
+  display: grid;
+}
+.col2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  border: 2px solid black;
+  padding: 15px;
+  grid-column-gap: 1em;
+}
+.col3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border: 2px solid black;
+  padding: 15px;
+  grid-column-gap: 1em;
+}
+.col4 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  border: 2px solid black;
+  padding: 15px;
+  grid-column-gap: 1em;
+}
+
+
+
+@media only screen and (min-width: 37.5em) {  /* skjáir (screen) sem eru stærri en 37.5em (600px) */
+  body {background-color: pink;}
+  .col2 {
+    grid-template-columns: 1fr;
+  }
+  .col3 {
+    grid-template-columns: 1fr;
+  }
+  .col4 {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 48em) {  /* skjáir (screen) sem eru stærri en 48em (768px) */
+  body {
+    background-color: green;
+  }
+  .col4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 60em) {  /* skjáir (screen) sem eru stærri en 60em (960px) */
+  body {
+    background-color: red;
+  }
+  .col2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .col3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .col4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

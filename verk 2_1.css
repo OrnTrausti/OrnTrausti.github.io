@@ -1,0 +1,25 @@
+body {
+	width: 90;
+	margin: 5 auto;
+}
+h1 {
+  border: 5px solid green;
+
+}
+div {
+	border: 8px solid red;
+	padding: 60px;
+	
+}
+.doty {
+	border: 5px dashed hotpink;
+	color: lightsalmon;
+	padding: 15px;
+
+}
+.gold {
+	color: gold;
+}
+.boxy {
+	margin-bottom: 70px;
+}

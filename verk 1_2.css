@@ -1,0 +1,22 @@
+h1 {
+  color: blue;
+}
+h2  {
+  color: #3c7d00;
+}
+h3 {
+  color: #591957;
+}
+.pinker {
+  color: #ff19d5;
+}
+strong {
+  color: #ff00fb;
+}
+em {
+  color: #ff6200;
+}
+a:link {color: #9da5f2}
+a:visited {color: #77207d}
+a:hover {color: #42ebd1}
+a:active {color: #6c8200}

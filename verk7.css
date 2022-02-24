@@ -1,0 +1,132 @@
+*{box-sizing: border-box;}
+body, html{height: 100vh; margin: 0; padding: 0;}
+body {
+  background: linear-gradient(to bottom, #cc3300 0%, #663300 100%)fixed;
+  color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+
+    grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+}
+.colorbackground {
+  background: linear-gradient(to bottom, #996633 0%, #ffcc66 100%);
+
+}
+header {padding: 2em;
+font-family: 'Supermercado One', cursive;}
+main {
+  grid-area: main;
+  color: black;
+}
+
+.onebox {
+  border: 2px solid black;
+  margin: 10px;
+  background: #bf8026;
+  padding-left: 9px;
+}
+.arrow {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  }
+.main_starting{
+  padding: 10px;
+  grid-area: main;
+  display:grid;
+  grid-column-gap: 1em;
+  color: black;
+  font-size: 18px;
+  }
+.main_class{
+  padding: 10px;
+  grid-area: main;
+  display:grid;
+  grid-column-gap: 1em;
+  color: black;
+  }
+.main_criticalrole {
+  padding: 10px;
+  grid-area: main;
+  display:grid;
+  grid-column-gap: 1em;
+  color: black;
+  font-size: 18px;
+}
+footer li  {
+  list-style: none;
+
+  text-decoration: none;
+  padding-top: 5px;
+}
+footer a:link, a:visited {
+  color: white;
+}
+a {
+  color: darkred;
+}
+.onecolor {
+    background: darkslategray;
+    color: white;
+    padding: 5px;
+  }
+.book {grid-area:book;}
+.wand {grid-area:wand;}
+.dice {grid-area:dice;}
+@media only screen and (min-width: 37em) {  /* skjáir (screen) sem eru stærri en 48em (768px) */
+article {grid-area: article;}
+aside {grid-area: aside;}
+
+  .books{
+  border: 2px solid black;
+  margin: 10px;
+  background: #ffcc66;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 3em;
+  grid-template-areas: 
+  "book wand dice";
+    }
+  footer {
+    margin-left:10px; margin-right:10px; margin-bottom:10px;
+  }
+
+
+}
+@media only screen and (min-width: 48em) {  /* skjáir (screen) sem eru stærri en 37.5em (600px) */
+
+.middle_video{
+    text-align: center;
+    color: black;
+}
+article{
+    grid-template-columns: auto auto;
+    display:grid;
+}
+.main_starting {
+    grid-template-columns: auto auto;
+}
+.main_criticalrole {grid-template-columns: auto auto;
+}
+
+.arrow {width: 320px;}
+@media only screen and (min-width:60em) {  /* skjáir (screen) sem eru stærri en 37.5em (600px) */
+ footer {
+  grid-area: footer;
+  grid-gap: 30px;
+  grid-template-rows: 1fr;
+  grid-template-columns: 33% 33% 33%;
+  display:grid;
+}
+.main_class {
+  margin:0 auto; max-width:90em;
+}
+.main_criticalrole {
+  margin:0 auto; max-width:70em;
+}
+header,main,.main_starting,footer{margin:0 auto; max-width:60em;}
+}

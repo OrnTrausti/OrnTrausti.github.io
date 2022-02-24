@@ -1,0 +1,80 @@
+
+
+nav {
+  grid-area: nav;
+  border: 3px solid mediumpurple;
+  margin-top: 10px; margin-left:10px; margin-right: 10px;
+}
+header {
+  grid-area: header;
+  border: 3px solid darkblue;
+  text-align: center;
+  margin-right: 10px; margin-left: 10px;
+}
+
+main {
+  grid-area: main;
+  display:grid;
+  grid-column-gap: 1em;
+  grid-template-columns:1fr;
+  padding: 5px;
+}
+footer {
+  grid-area: footer;
+  grid-template-columns: auto auto auto auto;
+  display:grid;
+  text-align: center;
+  border: 3px solid blueviolet;
+  padding: 10px;
+}
+
+.onebox {
+  border: 2px solid black;
+  margin: 10px;
+}
+a {
+  color: plum;
+} 
+@media only screen and (min-width: 37em) {  /* skjáir (screen) sem eru stærri en 48em (768px) */
+article {grid-area: article;}
+aside {grid-area: aside;}
+.aside2 {grid-area: aside2;}
+  
+  ul{  flex: 3;
+  display: flex;
+  padding: 20px;
+  flex-flow:row;
+  justify-content:space-between;
+  list-style: non;
+}
+
+  main{
+  grid-template-areas: 
+  "article article"
+  "aside aside2";
+  }
+  footer {
+    margin-left:10px; margin-right:10px; margin-bottom:10px;
+  }
+
+}
+@media only screen and (min-width: 48em) {  /* skjáir (screen) sem eru stærri en 37.5em (600px) */
+ main {
+  grid-template-rows: 1fr;
+  grid-template-columns: 50% auto auto;
+    grid-template-areas: 
+  "article aside aside2";
+}
+}
+@media only screen and (min-width:60em) {  /* skjáir (screen) sem eru stærri en 37.5em (600px) */
+ body {
+  max-width: 80em;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas: 
+  "nav nav nav nav"
+  "header header header header"
+  "main main main main"
+  "footer footer footer footer";
+}

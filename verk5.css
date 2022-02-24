@@ -1,0 +1,92 @@
+*{box-sizing: border-box;}
+body, html{height: 100vh; margin: 0; padding: 0;}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.shadow{
+  text-shadow: 5px 5px orange;
+  color: #c92e40;
+  text-align: center;
+  font-size: 3.5em;
+}
+body {
+  background: linear-gradient(to bottom, #993300 0%, #800000 100%);
+  color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+
+    grid-template-areas: 
+  "nav"
+  "header"
+  "main"
+  "footer";
+}
+.colorbackground {
+  background: linear-gradient(to bottom, #ff6600 0%, #993300 100%);
+
+}
+header {
+  grid-area: header;
+  font-family: 'Supermercado One', cursive;
+  }
+main {
+  padding: 10px;
+  grid-area: main;
+  display:grid;
+  grid-column-gap: 1em;
+  grid-template-columns:1fr;
+  color: black;
+}
+}
+nav {
+  grid-area: nav;
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 37em) {  /* skjáir (screen) sem eru stærri en 48em (768px) */
+article {grid-area: article;}
+aside {grid-area: aside;}
+.aside2 {grid-area: aside2;}
+  
+
+  main{
+  grid-template-areas: 
+  "article article"
+  "aside aside2";
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article {
+    margin-left: 5em;
+    font-size: 20px;
+  }
+
+
+
+}
+@media only screen and (min-width: 48em) {  /* skjáir (screen) sem eru stærri en 37.5em (600px) */
+
+  main {
+  grid-template-rows: 1fr;
+  grid-template-columns: 50% auto auto;
+    grid-template-areas: 
+  "article aside aside2";
+}
+footer {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media only screen and (min-width:60em) {  /* skjáir (screen) sem eru stærri en 37.5em (600px) */
+ footer {
+  grid-area: footer;
+}
+  header {width: auto;}
+}

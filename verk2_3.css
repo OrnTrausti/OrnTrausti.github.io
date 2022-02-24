@@ -1,0 +1,34 @@
+body {
+	display: flexbox;
+}
+.funnytext {
+	text-align: right;
+	background: lightgray;
+}
+.box {
+	overflow:auto;
+  border:3px solid black;
+    padding: 15px;
+}
+.bigL {
+	font-size: 3em;
+	padding: 5px;
+}
+.athugid {
+	background: yellow;
+}
+.imgR {
+	float: right;
+	padding:3px;
+}
+.group1 { 
+	float:left;
+	width: 40em;
+}
+.group2 { 
+	float:right;
+	width: 40em;
+}
+.group {
+	clear:both;
+}
